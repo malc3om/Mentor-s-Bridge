@@ -72,7 +72,7 @@ graph TD
     API --->|Mutations & Queries| SupabaseDB
     
     Client --->|Book Mentorship| Calendly
-
+```
 
 Some Screen-Shots:
 <img width="1918" height="972" alt="image" src="https://github.com/user-attachments/assets/9a1511c7-ea4a-42d2-98e6-e2535c0c547c" />
