@@ -1,6 +1,6 @@
 <div align="center">
   <br />
-  <h1>🌉 Virtual Mentor Bridge</h1>
+  <h1> Virtual Mentor Bridge</h1>
   <p><strong>Backing the very best builders — transforming visionary ideas into real-world career growth.</strong></p>
   
   <p>
@@ -16,18 +16,22 @@
 
 ---
 
-## ✨ Features
+##  Features : 
 
-- 🧠 **AI-Powered Matching Engine:** An advanced algorithmic system powered by Groq & OpenAI designed to map mentee goals with a mentor's exact expertise.
-- 🔮 **Machine Learning Career Prediction:** Built-in Python models deployed on Railway to forecast career trajectories based on user assessments.
-- 💬 **Real-time Group Chat:** Instant messaging channels implemented for cohorts and direct mentor-mentee interaction using Supabase Realtime.
-- 📅 **Calendly Integration:** Frictionless scheduling and booking directly within the platform.
-- 🎨 **Brutalist UI & Fluid Animations:** A premium, modern web experience leveraging GSAP with liquid metaball effects, brutalist borders, and ScrollTrigger parallax features.
-- 🔐 **Robust Authentication:** Secure ecosystem powered by Clerk, ensuring mentee and mentor portals remain isolated and secure.
+-  **AI-Powered Matching Engine:** An advanced algorithmic system powered by Groq & OpenAI designed to map mentee goals with a mentor's exact expertise.
+-  **Machine Learning Career Prediction:** Built-in Python models deployed on Railway to forecast career trajectories based on user assessments.
+-  **Real-time Group Chat:** Instant messaging channels implemented for cohorts and direct mentor-mentee interaction using Supabase Realtime.
+-  **Calendly Integration:** Frictionless scheduling and booking directly within the platform.
+-  **Brutalist UI & Fluid Animations:** A premium, modern web experience leveraging GSAP with liquid metaball effects, brutalist borders, and ScrollTrigger parallax features.
+-  **Robust Authentication:** Secure ecosystem powered by Clerk, ensuring mentee and mentor portals remain isolated and secure.
+  ## # Soon to be added :
+-  **Resume Analyser**
+-   **Ai Driven Mentor**
+-  **90 Day Roadmap Challenge**
 
 ---
 
-## 🏗 System Architecture
+## System Architecture
 
 The architecture seamlessly blends serverless endpoints with AI integration:
 
@@ -75,6 +79,7 @@ graph TD
 ```
 
 Some Screen-Shots:
+
 <img width="1918" height="972" alt="image" src="https://github.com/user-attachments/assets/9a1511c7-ea4a-42d2-98e6-e2535c0c547c" />
 <img width="1919" height="972" alt="image" src="https://github.com/user-attachments/assets/7864aafc-4606-453c-9693-64e2378a0d79" />
 <img width="1919" height="973" alt="image" src="https://github.com/user-attachments/assets/cc4dc758-3bca-4430-953d-e6dff6b9fafe" />
