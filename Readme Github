@@ -1,0 +1,184 @@
+<div align="center">
+  <br />
+  <h1>🌉 Virtual Mentor Bridge</h1>
+  <p><strong>Backing the very best builders — transforming visionary ideas into real-world career growth.</strong></p>
+  
+  <p>
+    <a href="#features"><img alt="Features" src="https://img.shields.io/badge/Features-Extensive-success?style=for-the-badge&logo=vercel&color=0055ff"></a>
+    <a href="#tech-stack"><img alt="Tech Stack" src="https://img.shields.io/badge/Stack-Next.js_14-success?style=for-the-badge&logo=next.js&color=111111"></a>
+    <a href="#getting-started"><img alt="Getting Started" src="https://img.shields.io/badge/Getting_Started-Quick-success?style=for-the-badge&logo=rocket&color=e55a00"></a>
+  </p>
+</div>
+
+<br />
+
+> **The Mentorship Gap:** Millions seek guidance, while thousands of experts want to give back. The current ecosystem is fragmented. Virtual Mentor Bridge unifies them, using intelligent AI algorithms to link ambition with wisdom.
+
+---
+
+## ✨ Features
+
+- 🧠 **AI-Powered Matching Engine:** An advanced algorithmic system powered by Groq & OpenAI designed to map mentee goals with a mentor's exact expertise.
+- 🔮 **Machine Learning Career Prediction:** Built-in Python models deployed on Railway to forecast career trajectories based on user assessments.
+- 💬 **Real-time Group Chat:** Instant messaging channels implemented for cohorts and direct mentor-mentee interaction using Supabase Realtime.
+- 📅 **Calendly Integration:** Frictionless scheduling and booking directly within the platform.
+- 🎨 **Brutalist UI & Fluid Animations:** A premium, modern web experience leveraging GSAP with liquid metaball effects, brutalist borders, and ScrollTrigger parallax features.
+- 🔐 **Robust Authentication:** Secure ecosystem powered by Clerk, ensuring mentee and mentor portals remain isolated and secure.
+
+---
+
+## 🏗 System Architecture
+
+The architecture seamlessly blends serverless endpoints with AI integration:
+
+```mermaid
+graph TD
+    %% Define Styles
+    classDef frontend fill:#0055ff,stroke:#000,stroke-width:2px,color:#fff
+    classDef auth fill:#111,stroke:#a3a3a3,stroke-width:2px,color:#fff
+    classDef ai fill:#e55a00,stroke:#000,stroke-width:2px,color:#fff
+    classDef db fill:#23c55e,stroke:#000,stroke-width:2px,color:#fff
+    classDef thirdparty fill:#a855f7,stroke:#000,stroke-width:2px,color:#fff
+
+    Client[Next.js Client GUI / GSAP Animations]:::frontend
+    
+    subgraph Services ["Application Layers"]
+        Auth[Clerk Auth & Middleware]:::auth
+        API[Next.js App API Routes]:::frontend
+    end
+    
+    subgraph "AI & ML Processing"
+        Groq[Groq NLP Matching]:::ai
+        OpenAI[OpenAI Assistant]:::ai
+        RailwayModel[Career Prediction Model]:::ai
+    end
+
+    subgraph "Data & Realtime"
+        SupabaseDB[(Supabase PostgreSQL)]:::db
+        SupabaseRT[Supabase Realtime Channels]:::db
+    end
+    
+    Calendly[Calendly API / Webhooks]:::thirdparty
+
+    %% Flows
+    Client <-->|User Interaction| Auth
+    Client <-->|Data Fetching| API
+    
+    API --->|LLM Inference| Groq
+    API --->|Generative Text| OpenAI
+    API --->|Career Forecasting| RailwayModel
+    
+    Client <-->|Live Group Chats| SupabaseRT
+    API --->|Mutations & Queries| SupabaseDB
+    
+    Client --->|Book Mentorship| Calendly
+```
+
+---
+
+## 🗺️ User Journey Mapping
+
+```mermaid
+sequenceDiagram
+    participant Mentee as Mentee
+    participant Platform as Mentor Bridge App
+    participant AI as Matching Engine
+    participant Mentor as Mentor
+    
+    Mentee->>Platform: Completes 13-question Assessment
+    Platform->>AI: Send Profile Data
+    AI-->>Platform: Analyze Goals, Industry & Needs
+    Platform->>Mentee: Displays Recommended Mentors
+    Mentee->>Platform: Requests Mentorship
+    Platform->>Mentor: Notifies Mentor
+    Mentor-->>Platform: Accepts Request
+    Platform->>Mentee: Unlocks Dashboard & Scheduling
+    Mentee->>Platform: Books Session via Calendly
+    Mentor-->>Mentee: Sync up on Group Chat & Video call!
+```
+
+---
+
+## 🛠 Tech Stack
+
+| Domain | Technology |
+| :--- | :--- |
+| **Framework** | Next.js 14, React 19 |
+| **Styling** | TailwindCSS v4, Brutalist Design System |
+| **Animations** | GSAP & ScrollTrigger |
+| **Authentication**| Clerk |
+| **Database** | Supabase (PostgreSQL) + Supabase Realtime |
+| **AI Integration**| Groq API, OpenAI API |
+| **ML Backend** | Python API deployed on Railway |
+| **Scheduling** | react-calendly |
+| **Icons** | Lucide React |
+
+---
+
+## 🚀 Getting Started
+
+Follow these steps to set up the Virtual Mentor Bridge locally.
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/virtual-mentor-bridge.git
+cd virtual-mentor-bridge
+```
+
+### 2. Install Dependencies
+
+Using `npm` (or your preferred package manager):
+
+```bash
+npm install
+```
+
+### 3. Environment Variables
+
+Create a `.env.local` file at the root of the project and populate it with your respective keys. Reference `.env.example` if available. You will need:
+- Clerk API Keys
+- Supabase URL & Anon Key
+- Groq & OpenAI API keys
+- Calendly URLs & tokens
+- Railway internal model endpoint
+
+```env
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_...
+CLERK_SECRET_KEY=sk_test_...
+
+NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJ...
+
+GROQ_API_KEY=gsk_...
+OPENAI_API_KEY=sk_...
+```
+
+### 4. Run the Development Server
+
+Execute the development script:
+
+```bash
+npm run dev
+```
+
+Your app will be running seamlessly at [http://localhost:3000](http://localhost:3000).
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions to enhance the Virtual Mentor Bridge.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingIdea`)
+3. Commit your changes (`git commit -m 'Add some AmazingIdea'`)
+4. Push to the branch (`git push origin feature/AmazingIdea`)
+5. Open a Pull Request
+
+---
+
+<div align="center">
+  <p><i>Building Tomorrow's Leaders. Smart Capital / Mentorship.</i></p>
+  <p><strong><a href="https://github.com/your-username/virtual-mentor-bridge">🌟 Star us on GitHub</a></strong></p>
+</div>
