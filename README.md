@@ -22,7 +22,7 @@
 -  **Machine Learning Career Prediction:** Built-in Python models deployed on Railway to forecast career trajectories based on user assessments.
 -  **Real-time Group Chat:** Instant messaging channels implemented for cohorts and direct mentor-mentee interaction using Supabase Realtime.
 -  **Calendly Integration:** Frictionless scheduling and booking directly within the platform.
--  **Brutalist UI & Fluid Animations:** A premium, modern web experience leveraging GSAP with liquid metaball effects, brutalist borders, and ScrollTrigger parallax features.
+-   **14-Point Career DNA Diagnostic:** A precision-engineered algorithmic assessment that synthesizes 14 core data points into a comprehensive, multi-dimensional profile of your professional trajectory.
 -  **Robust Authentication:** Secure ecosystem powered by Clerk, ensuring mentee and mentor portals remain isolated and secure.
   ## # Soon to be added :
 -  **Resume Analyser**
